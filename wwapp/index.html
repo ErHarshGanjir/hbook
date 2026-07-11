@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>H book</title>
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <!-- App icon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <!-- PWA Manifest -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/qYXDbTTT/H-book-logo-11zon.png">
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0f172a">
 
@@ -18,90 +15,177 @@
             padding: 0;
             height: 100%;
             width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #0f172a;
+            color: white;
             overflow: hidden;
-            box-sizing: border-box;
-            background: #fff;
         }
         
+        /* Security Screen Container */
+        #auth-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            background: #0f172a;
+            transition: opacity 0.5s ease;
+        }
+
+        #logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 24px;
+            border-radius: 24px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 280px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            background: #1e293b;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        button.btn-login {
+            width: 100%;
+            padding: 14px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Iframe Styles hidden by default */
         #content-frame {
-            display: block;
+            display: none;
             width: 100%;
             height: 100%;
             border: none;
             position: absolute;
             top: 0;
             left: 0;
-            overflow-y: scroll; 
-            -webkit-overflow-scrolling: touch;
+            background: #fff;
+        }
+
+        /* Install PWA Button */
+        #installBtn {
+            position: fixed;
+            bottom: 30px;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 100000;
+            display: none;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
         }
     </style>
 </head>
 
 <body>
+
+    <div id="auth-screen">
+        <img src="https://i.ibb.co/qYXDbTTT/H-book-logo-11zon.png" alt="H-book Logo" id="logo">
+        <div class="input-group">
+            <input type="password" id="pinInput" placeholder="Enter System PIN" autocomplete="off">
+            <button class="btn-login" onclick="verifyPin()">Access App</button>
+        </div>
+        
+        <button id="installBtn">⬇ Install H-book App</button>
+    </div>
+
     <iframe
         id="content-frame"
         allow="clipboard-read; clipboard-write"
         src="https://script.google.com/macros/s/AKfycbzoPeJWO_RNO-vtYWwTbV_guEOCk47rzYKfhsHOspyOyxpgmf3mOFDIii_m_sm05LAanQ/exec">
     </iframe>
 
-    <button id="installBtn" style="
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  padding: 10px 16px;
-  background: #0f172a;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  z-index: 999999;
-  display: none;">
-  ⬇ Install App
-</button>
-
-
-    <!-- Service worker registration -->
 <script>
-  // 1. Register the Service Worker (Mandatory for PWA)
+  // 1. PIN Security Logic & Persistence
+  window.onload = function() {
+      if (localStorage.getItem("hbook_auth") === "true") {
+          showMainApp();
+      }
+  };
+
+  function verifyPin() {
+      const enteredPin = document.getElementById("pinInput").value;
+      const correctPin = "1234"; // Set your custom security PIN here
+      
+      if (enteredPin === correctPin) {
+          localStorage.setItem("hbook_auth", "true");
+          showMainApp();
+      } else {
+          alert("Invalid Access PIN.");
+          document.getElementById("pinInput").value = "";
+      }
+  }
+
+  function showMainApp() {
+      document.getElementById("auth-screen").style.display = "none";
+      document.getElementById("content-frame").style.display = "block";
+  }
+
+  // Allow pressing Enter key to submit PIN
+  document.getElementById("pinInput").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") verifyPin();
+  });
+
+  // 2. Mandatory PWA Service Worker Registration
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('sw.js')
-        .then(reg => console.log('Service worker registered.', reg))
-        .catch(err => console.log('Service worker registration failed:', err));
+        .then(reg => console.log('SW Registered'))
+        .catch(err => console.log('SW Failed', err));
     });
   }
 
-  // 2. Install Button Logic
+  // 3. PWA Installation Banner Event Management
   let deferredPrompt;
   const installBtn = document.getElementById("installBtn");
 
   window.addEventListener('beforeinstallprompt', (e) => {
-    // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();
-    // Stash the event so it can be triggered later.
     deferredPrompt = e;
-    // Update UI to notify the user they can add to home screen
-    installBtn.style.display = 'block';
+    installBtn.style.display = 'block'; // Shows button contextually
 
     installBtn.addEventListener('click', () => {
-      // Hide our user interface that shows our A2HS button
       installBtn.style.display = 'none';
-      // Show the prompt
       deferredPrompt.prompt();
-      // Wait for the user to respond to the prompt
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
-        } else {
-          console.log('User dismissed the install prompt');
+          console.log('App successfully installed.');
         }
         deferredPrompt = null;
       });
     });
   });
 </script>
-
 
 </body>
 </html>
