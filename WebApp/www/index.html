@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="login-container">
+        <img src="assets/logo.png" alt="H-book Logo" id="logo">
+        <input type="password" id="pass" placeholder="Enter Security PIN">
+        <button onclick="checkAuth()">Access System</button>
+    </div>
+
+    <script>
+        function checkAuth() {
+            const input = document.getElementById('pass').value;
+            // Simple security check
+            if (input === "YOUR_SECRET_PIN") {
+                window.location.href = "https://script.google.com/macros/s/AKfycbzoPeJWO_RNO-vtYWwTbV_guEOCk47rzYKfhsHOspyOyxpgmf3mOFDIii_m_sm05LAanQ/exec";
+            } else {
+                alert("Unauthorized access!");
+            }
+        }
+    </script>
+</body>
+</html>
