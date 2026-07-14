@@ -199,17 +199,17 @@
             </div>
         </div>
 
-        <p class="release-date">Expected release date: <strong>July 14</strong></p>
+        <p class="release-date">Expected release date: <strong>July 16</strong></p>
     </div>
 
     <script>
         // Set the countdown target date directly here
         const targetYear = new Date().getFullYear();
-        let targetDate = new Date(`July 14, ${targetYear} 00:00:00`).getTime();
+        let targetDate = new Date(`July 16, ${targetYear} 00:00:00`).getTime();
 
         // If July 14 has passed for this current year, automatically update to next year
         if (new Date().getTime() > targetDate) {
-            targetDate = new Date(`July 14, ${targetYear + 1} 00:00:00`).getTime();
+            targetDate = new Date(`July 16, ${targetYear + 1} 00:00:00`).getTime();
         }
 
         function updateCountdown() {
