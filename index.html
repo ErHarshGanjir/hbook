@@ -1,243 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H Book - Coming Soon</title>
-    <style>
-        :root {
-            --bg-color: #0d1117;
-            --text-color: #c9d1d9;
-            --accent-color: #58a6ff;
-            --card-bg: #161b22;
-            --border-color: #30363d;
-        }
+    <title>H book</title>
 
-        * {
-            box-sizing: border-box;
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- App icon -->
+    <link rel="icon" type="image/png" href="hbook.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+
+    <style>
+        body, html {
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Subtle animated background grid */
-        body::before {
-            content: "";
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            top: -50%;
-            left: -50%;
-            background-image: 
-                linear-gradient(rgba(88, 166, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(88, 166, 255, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            animation: pan 120s linear infinite;
-            z-index: 1;
-        }
-
-        @keyframes pan {
-            0% { transform: translateY(0) translateX(0); }
-            100% { transform: translateY(50%) translateX(50%); }
-        }
-
-        .container {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 2rem;
-            max-width: 600px;
+            height: 100%;
             width: 100%;
-            animation: fadeIn 1.5s ease-out;
+            overflow: hidden;
+            box-sizing: border-box;
+            background: #fff;
         }
-
-        /* Logo Animation styling */
-        .logo-wrapper {
-            margin-bottom: 2rem;
-            display: inline-block;
-            position: relative;
-        }
-
-        .logo-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 20px;
-            border: 2px solid var(--border-color);
-            background: var(--card-bg);
-            padding: 10px;
-            box-shadow: 0 0 30px rgba(88, 166, 255, 0.2);
-            animation: float 4s ease-in-out infinite, pulseBorder 3s infinite alternate;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        @keyframes pulseBorder {
-            0% { border-color: var(--border-color); box-shadow: 0 0 20px rgba(88, 166, 255, 0.1); }
-            100% { border-color: var(--accent-color); box-shadow: 0 0 40px rgba(88, 166, 255, 0.4); }
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        .badge {
-            background-color: rgba(88, 166, 255, 0.15);
-            color: var(--accent-color);
-            padding: 0.35rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid rgba(88, 166, 255, 0.3);
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-
-        /* Countdown Grid Box */
-        .countdown-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            margin: 2.5rem 0;
-        }
-
-        .time-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 1.5rem 0.5rem;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .time-box:hover {
-            transform: scale(1.05);
-            border-color: var(--accent-color);
-        }
-
-        .time-num {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ffffff;
+        
+        #content-frame {
             display: block;
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .time-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #8b949e;
-        }
-
-        .release-date {
-            color: #8b949e;
-            font-size: 1rem;
-            margin-top: 1rem;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Responsive changes for mobile view */
-        @media (max-width: 480px) {
-            h1 { font-size: 2.2rem; }
-            .countdown-container { gap: 0.5rem; }
-            .time-num { font-size: 1.8rem; }
-            .time-box { padding: 1rem 0.25rem; }
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow-y: scroll; 
+            -webkit-overflow-scrolling: touch;
         }
     </style>
 </head>
+
 <body>
 
-    <div class="container">
-        <!-- Logo Area Container -->
-        <div class="logo-wrapper">
-            <img class="logo-img" src="https://i.ibb.co/7NNRN0rL/My-Drive-Icon.jpg" alt="H Book Logo">
-        </div>
 
-        <h1>H Book</h1>
-        <div class="badge">Coming Soon</div>
+        <iframe
+        id="content-frame"
+        allow="clipboard-read; clipboard-write"
+        src="https://script.google.com/macros/s/AKfycbzoPeJWO_RNO-vtYWwTbV_guEOCk47rzYKfhsHOspyOyxpgmf3mOFDIii_m_sm05LAanQ/exec"
+        width="100%" 
+        height="600px"
+        style="border:none;">
+    </iframe>
 
-        <!-- System Countdown Timer UI Element -->
-        <div class="countdown-container">
-            <div class="time-box">
-                <span class="time-num" id="days">00</span>
-                <span class="time-label">Days</span>
-            </div>
-            <div class="time-box">
-                <span class="time-num" id="hours">00</span>
-                <span class="time-label">Hours</span>
-            </div>
-            <div class="time-box">
-                <span class="time-num" id="minutes">00</span>
-                <span class="time-label">Minutes</span>
-            </div>
-            <div class="time-box">
-                <span class="time-num" id="seconds">00</span>
-                <span class="time-label">Seconds</span>
-            </div>
-        </div>
+    <button id="installBtn" style="
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 10px 16px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999999;
+  display: none;">
+  ⬇ Install App
+</button>
 
-        <p class="release-date">Due to some exceptional circumstances, the web deployment is delayed. Expected release date: <strong>July 16</strong></p>
-    </div>
 
-    <script>
-        // Set the countdown target date directly here
-        const targetYear = new Date().getFullYear();
-        let targetDate = new Date(`July 16, ${targetYear} 00:00:00`).getTime();
+    <!-- Service worker registration -->
+<script>
+let deferredPrompt;
+const installBtn = document.getElementById("installBtn");
 
-        // If July 14 has passed for this current year, automatically update to next year
-        if (new Date().getTime() > targetDate) {
-            targetDate = new Date(`July 16, ${targetYear + 1} 00:00:00`).getTime();
-        }
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = 'block';
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
+  installBtn.addEventListener('click', () => {
+    installBtn.style.display = 'none';
+    deferredPrompt.prompt();
 
-            // Calculate remaining intervals
-            const d = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((difference % (1000 * 60)) / 1000);
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+});
+</script>
 
-            // Display values inside the designated target container elements
-            document.getElementById('days').innerText = d < 10 ? '0' + d : d;
-            document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
-            document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
-            document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
 
-            // Handle condition once countdown ends completely
-            if (difference < 0) {
-                clearInterval(timerInterval);
-                document.querySelector('.countdown-container').innerHTML = "<div class='time-box' style='grid-column: span 4;'><span class='time-num'>H Book is Live!</span></div>";
-            }
-        }
-
-        // Execute function logic every second
-        const timerInterval = setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
 </body>
 </html>
