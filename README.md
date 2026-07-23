@@ -26,7 +26,7 @@ Great software is never just about writing lines of code; it is about the vision
 *   🎯 **Project Director & Backbone:** **Rahul** — The guiding force and structural pillar of this entire endeavor. Without your unwavering direction and clarity, this vision would never have taken shape.
 *   ❤️ **Special Dedication:** This project is lovingly dedicated to **Jay**. Your constant support, inspiration, and invaluable presence were the true driving forces behind every late-night coding session. This one is for you!
 *   💻 **Lead Developer :** **Harsh** — Translating complex architecture into reality, deploying secure clusters, and bringing the full-stack vision to life.
-*   📊 **Our Benchmark & Guiding Light:** A profound acknowledgment goes to our foundational **X Project (Excel and VBA)**. That masterpiece served as our ultimate benchmark, providing the core financial logic and helping us overcome hurdles at every single point of this system's enterprise evolution.
+*   📊 **Our Benchmark & Guiding Light:** A profound acknowledgment goes to our foundational **X Project (Excel and VBA) H Book Pro max**. That masterpiece served as our ultimate benchmark, providing the core financial logic and helping us overcome hurdles at every single point of this system's enterprise evolution.
 
 ---
 
