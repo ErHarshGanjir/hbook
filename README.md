@@ -1,7 +1,7 @@
 # 🚀 H Book - Payroll & Employee Management System
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/yourusername/H-Book/main/assets/banner.png" alt="H Book Banner" width="100%">
+  <img src="https://i.ibb.co/qYXDbTTT/H-book-logo-11zon.png" alt="H Book Banner" width="100%">
 </p>
 
 <p align="center">
