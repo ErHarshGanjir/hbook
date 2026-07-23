@@ -148,14 +148,13 @@ Welcome to the **H book** operating guide! Here is how to navigate and utilize t
 
 
 ---
-<!-- Signature Space -->
-<div style="height: 80px;"></div>
+<p align="left"><i>.</i></p> 
+<p align="left"><i>.</i></p> 
+<p align="left"><i>.</i></p> 
+<p align="left"><i>.</i></p> 
+<p align="left"><i>Made by Er. Harsh Ganjir</i></p> 
+<p align="left"><i> for Rakhecha medical stores </i></p>
 
-<!-- Credits and Date Row -->
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-    <span style="text-align: left;"><i>Made by Er. Harsh Ganjir </i></span>
-    <span style="text-align: right;"><i>for Rakhecha medical stores</i></span>
-</div>
 
 
 
