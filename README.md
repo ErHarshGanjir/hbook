@@ -21,7 +21,7 @@
 
 ## 🌟 The Story & Dedication
 
-Great software is never just about writing lines of code; it is about the visionaries who dream it, the anchors who support it, and the friends who inspire it. **H book** is a labor of love, built to solve real-world challenges while honoring the people who made it possible.
+Great software is never just about writing lines of code; it is about the visionaries who dream it, the anchors who support it, and the friends who inspire it. **H book** is built to solve real-world challenges while honoring the people who made it possible.
 
 *   🎯 **Project Director & Backbone:** **Rahul** — The guiding force and structural pillar of this entire endeavor. Without your unwavering direction and clarity, this vision would never have taken shape.
 *   ❤️ **Special Dedication:** This project is lovingly dedicated to **Jay**. Your constant support, inspiration, and invaluable presence were the true driving forces behind every late-night coding session. This one is for you!
