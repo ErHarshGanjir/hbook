@@ -146,4 +146,4 @@ Welcome to the **H book** operating guide! Here is how to navigate and utilize t
 3. **Web App Deployment:** Click **Deploy > New Deployment**, select **Web App**, execute as **Me**, set access to **Anyone**, and authorize permissions[cite: 2].
 
 ---
-<p align="center"><i>Made  by Er. Harsh Ganjir</i></p>
+<p align="center"><i>Made  by Er. Harsh Ganjir for Rakhecha medical stores </i></p>
