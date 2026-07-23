@@ -137,7 +137,7 @@ Welcome to the **H book** operating guide! Here is how to navigate and utilize t
    * Add the MongoDB URI and required API keys to your Hostinger environment variables (`.env`).
 4. **GoDaddy DNS Configuration:**
    * Log into GoDaddy. Navigate to DNS Management.
-   * Change the Nameservers to point to Hostinger (`ns1.dns-parking.com`, `ns2.dns-parking.com`) OR point the `A Record` to your Hostinger IP address.
+   * Change the Nameservers to point to Hostinger (`hbook.rakhechamedical.in`) OR point the `A Record 185.199.108.153``A Record 185.199.109.153``A Record 185.199.110.153``A Record 185.199.111.153` to your Hostinger IP address.
 
 ### Alternative / Legacy Deployment (Google Apps Script)
 *For lightweight or zero-cost execution:*
