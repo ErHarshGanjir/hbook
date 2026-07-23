@@ -2,7 +2,7 @@
   <img src="https://i.ibb.co/qYXDbTTT/H-book-logo-11zon.png" alt="H book Logo" width="150" />
 </p>
 
-<h1 align="center">✨ H book: Enterprise Edition ✨</h1>
+<h1 align="center">H book</h1>
 
 <p align="center">
   <b>Advanced Automated Payroll, Workforce Attendance & Cloud Resource Management Ecosystem</b><br>
