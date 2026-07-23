@@ -153,8 +153,8 @@ Welcome to the **H book** operating guide! Here is how to navigate and utilize t
 
 <!-- Credits and Date Row -->
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-    <span style="text-align: left;"><i>Made by Er. Harsh Ganjir for Rakhecha medical stores</i></span>
-    <span style="text-align: right;"><i>23 July 2026</i></span>
+    <span style="text-align: left;"><i>Made by Er. Harsh Ganjir </i></span>
+    <span style="text-align: right;"><i>for Rakhecha medical stores</i></span>
 </div>
 
 
