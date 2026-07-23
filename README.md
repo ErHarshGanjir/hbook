@@ -152,8 +152,9 @@ Welcome to the **H book** operating guide! Here is how to navigate and utilize t
 <p align="left"><i>.</i></p> 
 <p align="left"><i>.</i></p> 
 <p align="left"><i>.</i></p> 
-<p align="left"><i>Made by Er. Harsh Ganjir</i></p> 
-<p align="left"><i> for Rakhecha medical stores </i></p>
+<p align="left"><b><i>Made by Er. Harsh Ganjir</i></b></p> 
+<p align="left"><b><i> for Rakhecha medical stores </i></b></p>
+
 
 
 
