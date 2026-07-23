@@ -145,5 +145,8 @@ Welcome to the **H book** operating guide! Here is how to navigate and utilize t
 2. **Source Injection:** Paste the server-side code into `Code.gs` and create an HTML file named `Index` for `Index.html`[cite: 1, 2].
 3. **Web App Deployment:** Click **Deploy > New Deployment**, select **Web App**, execute as **Me**, set access to **Anyone**, and authorize permissions[cite: 2].
 
+
+
 ---
 <p align="center"><i>Made  by Er. Harsh Ganjir for Rakhecha medical stores </i></p>
+<p align="center"><i>r for Rakhecha medical stores </i></p>
