@@ -1,192 +1,264 @@
-# 🚀 H Book - Payroll & Employee Management System
+<div align="center">
 
-<p align="center">
-  <img src="https://i.ibb.co/qYXDbTTT/H-book-logo-11zon.png" alt="H Book Banner" width="100%">
-</p>
+<img src="https://i.ibb.co/qYXDbTTT/H-book-logo-11zon.png" width="140">
 
-<p align="center">
+# H Book
 
-![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=for-the-badge\&logo=googleappsscript\&logoColor=white)
-![Google Sheets](https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge\&logo=googlesheets\&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
-![Responsive](https://img.shields.io/badge/Responsive-Mobile%20%26%20Desktop-success?style=for-the-badge)
+### Modern Payroll & Employee Management System
 
-</p>
+A complete Employee, Attendance, Payroll & Salary Management solution built with **Google Apps Script**, **Google Sheets**, **HTML**, **CSS**, and **JavaScript**.
 
----
+![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-4285F4?style=for-the-badge&logo=googleappsscript&logoColor=white)
+![Google Sheets](https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=googlesheets&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Responsive](https://img.shields.io/badge/Responsive-Desktop%20%26%20Mobile-success?style=for-the-badge)
 
-## 📖 Overview
-
-**H Book** is a complete **Payroll & Employee Management System** developed using **Google Apps Script**, **HTML**, **CSS**, **JavaScript**, **Google Sheets**, and **Google Drive**.
-
-It provides an all-in-one solution for managing employees, attendance, payroll, salary slips, compliance, and employee records through a modern responsive web interface.
-
-Designed for businesses of all sizes, H Book combines the simplicity of Google Workspace with the power of a professional payroll system.
+</div>
 
 ---
 
-# ✨ Key Features
+# 📖 About
 
-## 👨‍💼 Employee Management
+H Book is a complete Payroll & Employee Management platform developed using Google Apps Script.
 
-* Add New Employees
-* Edit Employee Details
-* Employee Master Database
-* Employee Status Management
-* Working / X Working Filter
-* Employee Search
-* Employee Profile Cards
+The system manages
+
+- Employee Master
+- Attendance
+- Payroll
+- Salary Processing
+- Salary Slip
+- Employee Documents
+- Admin Users
+- Secure Authentication
+- Mobile Dashboard
+- Google Drive Integration
+
+---
+
+# ✨ Features
+
+## 👨 Employee Management
+
+- Employee Master
+- Add Employee
+- Edit Employee
+- Delete Employee
+- Employee Search
+- Employee Filter
+- Working / X Working
+- Employee Summary
+- Employee Documents
 
 ---
 
 ## 📅 Attendance Management
 
-* Interactive Attendance Matrix
-* Daily Attendance Entry
-* Sticky Header & Frozen Columns
-* Present
-* Absent
-* Leave
-* Holiday
-* Half Leave
-* Half Absent
+- Attendance Matrix
+- Daily Attendance
+- Holiday
+- Leave
+- Half Leave
+- Half Absent
+- Present
+- Absent
+- Frozen Employee Column
+- Sticky Header
+- Today's Highlight
 
 ---
 
-## 💰 Payroll Management
+## 💰 Payroll
 
-* Salary Processing
-* Salary Payment
-* Advance Salary
-* Salary Adjustments
-* Salary Ledger
-* Salary History
-* Payment Modes
-* Payment Dates
-
----
-
-## 📄 Salary Slip
-
-* Printable Salary Slip
-* Professional Layout
-* Employee Summary
-* Salary Breakdown
-* Print Support
+- Salary Processing
+- Salary Payment
+- Advance Salary
+- Salary Adjustment
+- Salary Ledger
+- Salary History
+- Salary Slip
+- Printable Salary Slip
 
 ---
 
 ## 🔐 Security
 
-* Secure Login System
-* Session Token Authentication
-* Password Change
-* Role Based Access
-* Admin Panel
-* User Management
+- Login
+- Auto Login
+- Session Token
+- Password Change
+- Role Based Access
+- Admin Panel
 
 ---
 
-## 📂 Employee Documents
+## ☁ Google Workspace
 
-* Google Drive Integration
-* Secure File Upload
-* Employee Document Storage
-* Permanent Backup Folder
-
----
-
-## 📱 Responsive Design
-
-* Desktop Dashboard
-* Mobile Dashboard
-* Mobile Attendance
-* Mobile Payroll
-* Adaptive Login Screen
-* Bottom Navigation
+- Google Sheets Database
+- Google Drive Documents
+- Automatic Backups
+- Employee Uploads
 
 ---
 
-# 🖼 Screenshots
+# 🖥 Desktop Modules
 
-| Desktop Dashboard   | Mobile Dashboard    |
-| ------------------- | ------------------- |
-| Add your screenshot | Add your screenshot |
+| Module | Description |
+|----------|-------------|
+| Login | Secure Desktop Login |
+| Dashboard | Main Application |
+| Employee Profile | Employee Management |
+| Attendance Matrix | Attendance Entry |
+| Salary Inputs | Payroll Processing |
+| Security Settings | User Management |
+| Employee Summary | Monthly Statistics |
+| Password Manager | Change Password |
+
+---
+
+# 📱 Mobile Modules
+
+| Module | Description |
+|----------|-------------|
+| Mobile Login | Secure Mobile Login |
+| Mobile Dashboard | Responsive Dashboard |
+| Bottom Navigation | Quick Navigation |
+| Attendance Cards | Mobile Attendance |
+| Salary Cards | Payroll |
+| Employee List | Employee Directory |
+| Security Module | User Settings |
+
+---
+
+# ⚙ Backend Functions
+
+| Function | Responsibility |
+|----------|----------------|
+| doGet() | Launch Web Application |
+| getAdminSheet() | Create Admin Sheet |
+| checkLogin() | User Authentication |
+| validateSessionToken() | Auto Login |
+| updateOwnPassword() | Change Password |
+| fetchUsersForUI() | Load Users |
+| saveNewUser() | Create / Update User |
+| deleteUser() | Delete User |
+| getAvailableDatabases() | List Monthly Sheets |
+| getAttendanceData() | Load Attendance |
+| updateAttendanceCell() | Save Attendance |
+| getEmployeeMaster() | Load Employee Data |
+| updateComplianceBasicPay() | Update Basic Salary |
+| saveNewEmployee() | Register Employee |
+| updateEmployeeData() | Update Employee |
+| uploadEmployeeDocument() | Upload Documents |
+| generateSalarySlip() | Generate Salary Slip |
+| calculatePayroll() | Payroll Calculation |
+| createBackup() | Backup Database |
+
+---
+
+# 🎨 Frontend Components
+
+## Login
+
+- Desktop Login
+- Mobile Login
+- Auto Login
+- Session Validation
+- Password Recovery
+
+---
+
+## Dashboard
+
+- Sidebar Navigation
+- Top Header
+- User Profile
+- Logout
+- Database Selector
+
+---
+
+## Employee Module
+
+- Employee Cards
+- Search
+- Filters
+- Add Employee
+- Edit Employee
+- Summary Popup
+
+---
+
+## Attendance Module
+
+- Attendance Table
+- Sticky Columns
+- Sticky Header
+- Today's Highlight
+- Attendance Input
+- Mobile Attendance
+
+---
+
+## Payroll Module
+
+- Salary Payment
+- Advance Salary
+- Salary Slip
+- Payroll Ledger
+- Payment History
+
+---
+
+## Security Module
+
+- Admin Panel
+- User Management
+- Password Management
+- Role Permissions
 
 ---
 
 # 🏗 System Architecture
 
-```text
-                Users
-                  │
-                  ▼
-        Responsive Web UI
-        (HTML + CSS + JS)
-                  │
-                  ▼
-        Google Apps Script
-                  │
-     ┌────────────┼────────────┐
-     ▼            ▼            ▼
-Google Sheets  Google Drive  Authentication
-     │            │            │
-     ▼            ▼            ▼
-Attendance   Documents    Session Tokens
-Payroll      Backups      Admin Users
-Employee Data
 ```
-
----
-
-# 📦 Modules
-
-* Employee Management
-* Attendance Management
-* Payroll Processing
-* Salary Ledger
-* Salary Slip Generator
-* Security Management
-* User Management
-* Employee Documents
-* Backup Management
-* Google Drive Integration
-
----
-
-# 🛠 Technology Stack
-
-| Technology         | Purpose          |
-| ------------------ | ---------------- |
-| Google Apps Script | Backend          |
-| HTML5              | Frontend         |
-| CSS3               | Styling          |
-| JavaScript         | Client Logic     |
-| Google Sheets      | Database         |
-| Google Drive       | Document Storage |
-| Material Icons     | Icons            |
-| Google Fonts       | Typography       |
+                User
+                  │
+                  ▼
+      Responsive Web Interface
+                  │
+                  ▼
+         Google Apps Script
+                  │
+        ┌─────────┼─────────┐
+        ▼         ▼         ▼
+ Google Sheets  Google Drive Authentication
+        │
+        ▼
+ Attendance
+ Payroll
+ Employee Data
+```
 
 ---
 
 # 📂 Project Structure
 
-```text
+```
 H-Book
 │
-├── Code.gs
 ├── Index.html
-├── app.js
-├── style.css
-├── Assets
+├── Code.gs
+├── Style.css
+├── JavaScript
 │
+├── Authentication
 ├── Employee Module
 ├── Attendance Module
 ├── Payroll Module
 ├── Salary Slip Module
-├── Authentication Module
 ├── Admin Module
 ├── Google Drive Module
 └── Backup Module
@@ -194,135 +266,58 @@ H-Book
 
 ---
 
-# 🚀 Installation
+# 🚀 Technology Stack
 
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/yourusername/H-Book.git
-```
-
----
-
-### 2. Create Google Apps Script Project
-
-* Open Google Apps Script
-* Create a New Project
-* Copy all project files
-
----
-
-### 3. Configure Spreadsheet
-
-Create required sheets:
-
-* emp
-* Admin_Users
-* Monthly Payroll Sheets
-
----
-
-### 4. Configure Google Drive
-
-Create folders for:
-
-* Employee Documents
-* Permanent Backup
-* Rolling Backup
-
-Update Folder IDs inside:
-
-```javascript
-BACKUP_ARCHIVE_FOLDER_ID
-
-BACKUP_REPLACE_FOLDER_ID
-
-DOCUMENTS_UPLOAD_FOLDER_ID
-```
-
----
-
-### 5. Deploy
-
-Deploy as
-
-**Web App**
-
-Anyone with access
-
-Done ✅
+- Google Apps Script
+- HTML5
+- CSS3
+- JavaScript
+- Google Sheets
+- Google Drive
+- Material Symbols
+- Google Fonts
 
 ---
 
 # 🔒 Security Features
 
-* Secure Authentication
-* Session Token Login
-* Password Management
-* Admin Controls
-* Role Permissions
-* Protected Employee Data
+✅ Secure Login
+
+✅ Session Tokens
+
+✅ Auto Login
+
+✅ Role Based Access
+
+✅ Admin Users
+
+✅ Password Management
 
 ---
 
-# 🌟 Highlights
+# 📱 Responsive Design
 
-✅ Employee Database
-
-✅ Payroll Management
-
-✅ Attendance Tracking
-
-✅ Salary Processing
-
-✅ Salary Slips
-
-✅ Google Drive Storage
-
-✅ Google Sheets Database
-
-✅ Responsive UI
-
-✅ Mobile Dashboard
-
-✅ Admin Panel
+- Desktop UI
+- Mobile UI
+- Adaptive Login
+- Bottom Navigation
+- Mobile Attendance
+- Mobile Payroll
+- Responsive Employee Cards
 
 ---
 
-# 📈 Future Roadmap
+# 🚀 Future Roadmap
 
-* Leave Management
-* Notifications
-* Analytics Dashboard
-* Reports
-* Email Integration
-* WhatsApp Alerts
-* QR Attendance
-* Face Recognition Attendance
-* Multi Company Support
-* API Integration
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-
-2. Create a feature branch
-
-3. Commit your changes
-
-4. Push the branch
-
-5. Create a Pull Request
-
----
-
-# 📜 License
-
-This project is licensed under the MIT License.
+- Leave Management
+- Analytics Dashboard
+- WhatsApp Notifications
+- Email Notifications
+- QR Attendance
+- Face Recognition
+- API Integration
+- Multi Company Support
+- Employee Self Service Portal
 
 ---
 
@@ -332,14 +327,12 @@ This project is licensed under the MIT License.
 
 Google Apps Script Developer
 
-Payroll Automation Enthusiast
-
 ---
 
-<p align="center">
+<div align="center">
 
-### ⭐ If you like this project, don't forget to Star the repository!
+### ⭐ Star this repository if you like this project!
 
 Made with ❤️ using Google Apps Script
 
-</p>
+</div>
