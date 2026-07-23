@@ -24,8 +24,8 @@
 Great software is never just about writing lines of code; it is about the visionaries who dream it, the anchors who support it, and the friends who inspire it. **H book** is a labor of love, built to solve real-world challenges while honoring the people who made it possible.
 
 *   🎯 **Project Director & Backbone:** **Rahul** — The guiding force and structural pillar of this entire endeavor. Without your unwavering direction and clarity, this vision would never have taken shape.
-*   💻 **Lead Developer / Engineer:** **Er. Harsh Ganjir** — Translating complex architecture into reality, deploying secure clusters, and bringing the full-stack vision to life.
 *   ❤️ **Special Dedication:** This project is lovingly dedicated to **Jay**. Your constant support, inspiration, and invaluable presence were the true driving forces behind every late-night coding session. This one is for you!
+*   💻 **Lead Developer :** **Harsh** — Translating complex architecture into reality, deploying secure clusters, and bringing the full-stack vision to life.
 *   📊 **Our Benchmark & Guiding Light:** A profound acknowledgment goes to our foundational **X Project (Excel and VBA)**. That masterpiece served as our ultimate benchmark, providing the core financial logic and helping us overcome hurdles at every single point of this system's enterprise evolution.
 
 ---
@@ -146,4 +146,4 @@ Welcome to the **H book** operating guide! Here is how to navigate and utilize t
 3. **Web App Deployment:** Click **Deploy > New Deployment**, select **Web App**, execute as **Me**, set access to **Anyone**, and authorize permissions[cite: 2].
 
 ---
-<p align="center"><i>Made with ❤️ by Er. Harsh Ganjir & Team.</i></p>
+<p align="center"><i>Made  by Er. Harsh Ganjir</i></p>
