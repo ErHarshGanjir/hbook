@@ -149,8 +149,9 @@ Welcome to the **H book** operating guide! Here is how to navigate and utilize t
 
 ---
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-    <p style="margin: 0;"><i>Made by Er. Harsh Ganjir for Rakhecha medical stores</i></p>
-    <p style="margin: 0;"><i>23 July 2026</i></p>
+    <span style="text-align: left;"><i>Made by Er. Harsh Ganjir for Rakhecha medical stores</i></span>
+    <span style="text-align: right;"><i>23 July 2026</i></span>
 </div>
+
 
 
